@@ -7,9 +7,9 @@ let video;
 let label = 'waiting...';
 
 // STEP 1: Load the model!
-function preload(){
-  classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/x9qEbc9wF/model.json')
-}
+// function preload(){
+//   classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/x9qEbc9wF/model.json')
+// }
 
 function setup() {
   createCanvas(640, 520);
@@ -28,7 +28,6 @@ function classifyVideo(){
 
 function draw() {
   background(0);
-  
   // Draw the video
   image(video, 1, 1);
 
@@ -42,8 +41,8 @@ function draw() {
 
 // STEP 3: Get the classification!
 function gotResults(error,results){
-  if(error){
-    console.error(error)
+  if(err){
+    console.error(err)
     return
   }
 label =  results[0].label;
