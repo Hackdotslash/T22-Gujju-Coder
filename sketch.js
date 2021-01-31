@@ -12,7 +12,7 @@ let label = 'waiting...';
 // }
 
 function setup() {
-  createCanvas(640, 520);
+  createCanvas(520, 520);
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
